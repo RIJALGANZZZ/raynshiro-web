@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RaynShiro Web</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('https://files.catbox.moe/n7wb8t.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+    .overlay {
+      background-color: rgba(0,0,0,0.5);
+      position: absolute;
+      top:0;left:0;width:100%;height:100%;
+      z-index: -1;
+    }
+    .container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      position: relative;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      max-width: 400px;
+    }
+    .btn {
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      text-decoration: none;
+      color: white;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+    .ig { background: #E1306C; }
+    .wa { background: #25D366; }
+    .tt { background: #010101; }
+    .group { background: #5865F2; }
+    .sewa { background: #FFA500; }
+    .about { background: #FF69B4; }
+    .music { background: #9400D3; }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .gallery {
+      max-height: 500px;
+      overflow-y: auto;
+      margin-top: 20px;
+      padding: 10px;
+      background: rgba(0,0,0,0.6);
+      border-radius: 10px;
+    }
+    .section {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="container">
+    <h1>RaynShiro Web</h1>
+    <p>Welcome to my personal site 🌐</p>
+
+    <div class="buttons">
+      <button class="btn ig" onclick="showSection('ig')">Instagram</button>
+      <button class="btn tt" onclick="showSection('tt')">Tiktok</button>
+      <button class="btn wa" onclick="showSection('wa')">WhatsApp</button>
+      <button class="btn group" onclick="showSection('group')">Group & Channel</button>
+      <button class="btn sewa" onclick="showSection('sewa')">Sewa Bot WhatsApp</button>
+      <button class="btn about" onclick="showSection('about')">📖 Mengenal Saya Lebih Dalam</button>
+    </div>
+
+    <button class="btn music" onclick="document.getElementById('audio').play()" style="margin-top: 40px;">🎵 Putar Musik</button>
+
+    <div id="ig" class="section">
+      <h2>Instagram</h2>
+      <a href="https://instagram.com/ellen_reality02" target="_blank">ellen_reality02</a>
+    </div>
+
+    <div id="tt" class="section">
+      <h2>Tiktok</h2>
+      <a href="https://tiktok.com/@RaynShiro" target="_blank">@RaynShiro</a>
+    </div>
+
+    <div id="wa" class="section">
+      <h2>WhatsApp</h2>
+      <a href="https://wa.me/6281245594083" target="_blank">Chat Me</a>
+    </div>
+
+    <div id="group" class="section">
+      <h2>Group & Channel WhatsApp</h2>
+      <a href="https://chat.whatsapp.com/EcJ9LNCCTgDLgYCsOHuppa" target="_blank">Group WhatsApp</a><br><br>
+      <a href="https://whatsapp.com/channel/0029Vb5oxL8B4hdOBTCX4F25" target="_blank">Channel WhatsApp</a>
+    </div>
+
+    <div id="sewa" class="section gallery">
+      <h2>Sewa Bot WhatsApp</h2>
+      <img src="https://files.catbox.moe/o94vba.jpg" alt="Foto 1">
+      <img src="https://files.catbox.moe/nf3fx0.jpg" alt="Foto 2">
+      <img src="https://files.catbox.moe/nvzgew.jpg" alt="Foto 3">
+      <img src="https://files.catbox.moe/naximn.jpg" alt="Foto 4">
+    </div>
+
+    <div id="about" class="section" style="margin-top:20px; background: rgba(0,0,0,0.6); padding:20px; border-radius:10px; max-width:600px;">
+      <h2>📖 Perkenalan Diri</h2>
+      <p>Perkenalkan, saya <b>RaynShiro</b>. Anda mungkin mengenal saya dengan beberapa nama panggilan, seperti Dill, Rayn, atau Ellen. Saat ini saya masih berstatus pelajar. Meskipun demikian, saya memiliki minat dan ambisi yang kuat di dua bidang yang berbeda, yaitu pemrograman dan pelayaran.</p>
+      <p><b>Cita-Cita:</b> Cita-cita saya yang utama adalah menjadi seorang programmer profesional. Dunia pemrograman menarik minat saya karena tantangannya yang terus berkembang dan kesempatan untuk menciptakan solusi inovatif. Saya tertarik untuk menguasai berbagai bahasa pemrograman dan teknologi terkini agar dapat berkontribusi dalam pengembangan perangkat lunak yang bermanfaat.</p>
+      <p>Selain itu, saya juga memiliki ketertarikan yang mendalam terhadap dunia pelayaran. Petualangan di laut, tantangan navigasi, dan keindahan alam bawah laut selalu memikat saya. Saya melihat profesi pelaut sebagai peluang untuk menjelajahi dunia dan merasakan pengalaman yang unik dan berharga.</p>
+      <p>Meskipun terlihat berbeda, kedua cita-cita ini saling melengkapi. Ketelitian dan kemampuan memecahkan masalah yang dibutuhkan dalam pemrograman dapat saya terapkan dalam navigasi dan pengoperasian kapal. Sementara itu, pengalaman menjelajahi lautan dapat memberikan saya perspektif baru dan inspirasi dalam pengembangan perangkat lunak. Saya yakin bahwa dengan kerja keras dan dedikasi, saya dapat mencapai kedua impian saya.</p>
+    </div>
+  </div>
+
+  <audio id="audio" src="https://files.catbox.moe/x9g2rd.m4a" type="audio/mpeg"></audio>
+</body>
+</html>
